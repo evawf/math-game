@@ -1,0 +1,139 @@
+html {
+    background-size: cover;
+    background-position: cover;
+    opacity: 0.5;
+    text-align: center;
+}
+
+.head {
+    height: 100px;
+    text-align: center;
+}
+
+.mode, .num, .equal, .message {
+    text-align: center;
+    height: 50px;
+    font-size: 30px;
+}
+
+.answer {
+    text-align: center;
+    height: 150px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+hr {
+    width: 500px;
+    margin-top: 15px;
+}
+
+.btn {
+    background-color: rgb(80, 164, 165);
+    border: none;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    border-radius: 8px;
+    width: 60px;
+    height: 60px;
+    margin: 40px 20px;
+    padding: 10px;
+    box-shadow: 0 0.5em 0.5em -0.4em black;
+}
+
+button:hover {
+    background-color: rgb(128, 82, 163);
+    transform: translateY(0.05em);
+}
+
+#reset, #easy, #hard {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background-color: pink;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0px 10px;
+    color: rgb(3, 3, 3);
+    border: 1px solid rgb(54, 53, 53);
+    transition: .5s;
+    box-shadow: 0 0.5em 0.5em -0.4em black;
+}
+
+#reset {
+    background-color: green;
+}
+
+.num{
+    margin: 50px 0px;
+}
+
+#num1, #add, #num2{
+    font-size: 40px;
+    margin:0px 15px;
+    color: black;
+    text-align: center;
+}
+
+.message {
+    margin: 50px 0px;
+}
+
+img:nth-of-type(1) {
+    animation-timing-function: linear;
+}
+
+img:nth-of-type(2){
+    animation-timing-function: ease;
+}
+
+img:nth-of-type(3){
+    animation-timing-function: ease-in;
+}
+
+img:nth-of-type(4){
+    animation-timing-function: ease-out;
+}
+
+img:nth-of-type(5){
+    animation-timing-function: ease-in-out;
+} 
+
+.flying {
+    text-align: center;
+    position: fixed;
+    top:0;
+    left:50%;
+    height: 150px;
+    width: 650px;
+    margin-left: -325px;
+    animation-name: flying;
+    animation-duration: 8.8s;
+    animation-iteration-count: 1;
+}
+
+.floating {
+    animation-name: floating;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+
+@keyframes flying {
+    from {top:100%;}
+    to {top:0;}
+}
+
+@keyframes floating {
+    from,to{transform: translateX(10px) rotate(4deg);
+    }
+    50% {
+        transform: translateX(-10px) rotate(-4deg);
+    }
+}
+
